@@ -91,9 +91,14 @@ HeaderHorizonHeight="el"
 ! Mazia Meteo stations: B1(1000m),B2(1500m),B3(2000m),M4,M5
 ! Province BZ Meteo Stations: 0070 Elferspitze, 0110 Melag, 0310 Taufers, 0950 Schlanders, 0540 Agums-Prad, 1930 Naturns, 0640 Schöntaufspitze
 		
-CoordinatePointX	= 621671,620815,621733,629601,623542,613582,626323,611860,635863,621152,652371,624957
-CoordinatePointY	= 5168733,5171506,5172112,5177788,5173274,5181426,5188431,5165895,5165317,5164300,5167937,5151212
+PointFile = "ListPoints"
+! CoordinatePointX	= 621671,620815,621733,629601,623542,613582,626323,611860,635863,621152,652371,624957
+! CoordinatePointY	= 5168733,5171506,5172112,5177788,5173274,5181426,5188431,5165895,5165317,5164300,5167937,5151212
 
+!#######  header ##########
+HeaderPointID = "ID"
+HeaderCoordinatePointX = "Xwgs"
+HeaderCoordinatePointY = "Ywgs"
 
 !======================================= 
 !RATES OF DECREASE WITH ELEVATION
