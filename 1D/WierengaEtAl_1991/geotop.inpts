@@ -1,0 +1,133 @@
+!*******************************
+!******* CONFIGURATION *********
+!*******************************
+TimeStepEnergyAndWater = 300
+InitDateDDMMYYYYhhmm = 17/06/2014 19:00
+EndDateDDMMYYYYhhmm = 19/06/2014 19:00
+!! in order to correctly run with meteo-io on simulation period should be contained in meteo data period.
+EnergyBalance =1
+WaterBalance = 1
+PointSim = 1
+
+!*******************************
+!********* GEOGRAPHY ***********
+!*******************************
+Latitude = 40.25
+Longitude = 16.31
+
+!*******************************
+!****** METEO STATIONS *********
+!*******************************
+NumberOfMeteoStations=1
+MeteoStationCoordinateX=609882.5
+MeteoStationCoordinateY=4345618.0
+MeteoStationLatitude=40.25
+MeteoStationLongitude=16.31
+MeteoStationElevation=300
+MeteoStationStandardTime=1.0
+StandardTimeSimulation=1.0
+
+HeaderDateDDMMYYYYhhmmMeteo = "POSIX"
+HeaderIPrec = "Iprec"
+HeaderWindVelocity = "WindSp"
+HeaderWindDirection = "WindDir"
+HeaderRH = "RH"
+HeaderAirTemp = "AirT"
+HeaderSWglobal = "Swglob"
+HeaderCloudSWTransmissivity = "CloudTrans"
+
+!********************************************
+!****** INIT AND BOUNDARY CONDITIONS ********
+!********************************************
+InitWaterTableDepth= 10000.0
+FreeDrainageAtLateralBorder=1
+FreeDrainageAtBottom=1
+
+!************************************
+!******* POINTS OF INTEREST *********
+!************************************
+PointFile = "listpoints"
+HeaderPointID = "ID"
+HeaderCoordinatePointX = "xcoord"
+HeaderCoordinatePointY = "ycoord"
+PointElevation = 300
+PointSlope = 0
+PointAspect = 90
+PointSkyViewFactor = 1.0
+
+!*******************************
+!******* INPUT MAPS ************
+!*******************************
+DemFile = "input_maps/dem_mybasin_2"
+MeteoFile = "meteo/meteorainy"
+LandCoverMapFile = "input_maps/landcover_mybasin_2"
+
+!*******************************
+!******** LAND COVER  **********
+!*******************************
+NumLandCoverTypes = 1
+SoilRoughness = 100.0
+SoilAlbVisDry = 0.2
+SoilAlbNIRDry = 0.2
+SoilAlbVisWet = 0.2
+SoilAlbNIRWet = 0.2
+SoilEmissiv = 0.96
+SurFlowResLand = 0.5
+VegHeight =1800.0
+LSAI = 0.6
+CanopyFraction = 0.0
+RootDepth =1000.0
+VegReflectVis = 0.1
+VegReflNIR = 0.58
+VegTransVis = 0.05
+VegTransNIR = 0.25
+
+!*******************************
+!*******  SOIL TYPE ************
+!*******************************
+SoilParFile = "soil/soil"
+
+SoilLayerTypes = 1
+SoilLayerNumber = 8
+InitSoilTemp = 14.0
+InitSoilTempBedrock = 14.0
+ThermalConductivitySoilSolids = 2.5
+ThermalCapacitySoilSolids = 2300000.0
+
+HeaderSoilDz = "Dz"
+HeaderLateralHydrConductivity = "Kh"
+HeaderNormalHydrConductivity = "Kv"
+HeaderThetaRes = "res"
+HeaderFieldCapacity = "fc"
+HeaderThetaSat = "sat"
+HeaderAlpha = "a"
+HeaderN = "n"
+HeaderSpecificStorativity = "SS"
+
+!*******************************
+!******* NUMERICS **********
+!*******************************
+HeatEqTol = 1.0E-6
+RichardMaxIter = 1500
+RichardInitForc = 0.01
+
+!*************************************
+!******* OUTPUT TIME SERIES **********
+!*************************************
+OutputSoilMaps=0.5
+SoilAll=1
+SoilLiqWaterPressTensorFile="output_maps/waterPress"	
+SoilLiqWaterContentTensorFile="output_maps/waterCont"	
+
+DtPlotDischarge = 0.5
+DtPlotPoint = 0.0833333333333
+SoilTempProfileFile="output-tabs/soiltemp"
+SoilLiqContentProfileFile="output-tabs/thetaliq"
+SoilLiqWaterPressProfileFile="output-tabs/soilpsi"
+PointOutputFile="output-tabs/point"
+PointAll=1
+
+!*******************************
+!********* RECOVERY ************
+!*******************************
+
