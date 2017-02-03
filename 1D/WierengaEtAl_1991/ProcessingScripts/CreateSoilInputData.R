@@ -46,12 +46,12 @@ for (j in 1:nsoilay-1){
 df.out$Kh <-  270.1*10/86400  # [mm/s] - convert from 270.1 cm/d
 df.out$Kv <-  270.1*10/86400  # [mm/s] - convert from 270.1 cm/d
 df.out$vwc_r <- 0.083         # residual VWC
-df.out$vwc_w <- 0.091         # wilting point VWC
+#df.out$vwc_w <- 0.091         # wilting point VWC
 df.out$vwc_fc <- 0.137        # field capacity VWC
 df.out$vwc_s <- 0.321         # saturated VWC
-df.out$alpha <- 0.055*(1/10)  # [mm-1] - convert from 0.055 cm-1
-df.out$n <- 1.51              # Van Genuchten n
-df.out$stor <- 1.00E-07       # Specific storativity - use default value
+df.out$VG_alpha <- 0.055*(1/10)  # [mm-1] - convert from 0.055 cm-1
+df.out$VG_n <- 1.51              # Van Genuchten n
+df.out$SS <- 1.00E-07       # Specific storativity - use default value
 
 # save output file
 write.csv(df.out, out.path, quote=F, row.names=F)

@@ -88,7 +88,6 @@ VegTransNIR = 0.25
 SoilParFile = "soil/soil"
 
 SoilLayerTypes = 1
-SoilLayerNumber = 8
 InitSoilTemp = 14.0
 InitSoilTempBedrock = 14.0
 ThermalConductivitySoilSolids = 2.5
@@ -97,11 +96,11 @@ ThermalCapacitySoilSolids = 2300000.0
 HeaderSoilDz = "Dz"
 HeaderLateralHydrConductivity = "Kh"
 HeaderNormalHydrConductivity = "Kv"
-HeaderThetaRes = "res"
-HeaderFieldCapacity = "fc"
-HeaderThetaSat = "sat"
-HeaderAlpha = "a"
-HeaderN = "n"
+HeaderThetaRes = "vwc_r"
+HeaderFieldCapacity = "vwc_fc"
+HeaderThetaSat = "vwc_s"
+HeaderAlpha = "VG_alpha"
+HeaderN = "VG_n"
 HeaderSpecificStorativity = "SS"
 
 !*******************************
