@@ -65,6 +65,7 @@ LandCoverMapFile = "input_maps/landcover_mybasin_2"
 !*******************************
 !******** LAND COVER  **********
 !*******************************
+PointLandCoverType = 1
 NumLandCoverTypes = 1
 SoilRoughness = 100.0
 SoilAlbVisDry = 0.2
