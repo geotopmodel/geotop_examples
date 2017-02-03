@@ -29,7 +29,7 @@ date.end <- dmy_hm("21/08/1987 23:00")
 df.met <- data.frame(Date = format(seq(date.start, date.end, by="hour"), "%d/%m/%Y %H:%M"),
                      Iprec = sprintf("%f", 1.82*10/24), 
                      WindSp = sprintf("%f", 0),
-                     WindDir = sprintf("%f", 0),
+                     WindDir = sprintf("%f", 90.0),
                      RH = sprintf("%f", 100.0),
                      AirT = sprintf("%f", 5.0),
                      Swglob = sprintf("%f", 0.0),
