@@ -40,7 +40,7 @@ HeaderCloudSWTransmissivity = "CloudTrans"
 !****** INIT AND BOUNDARY CONDITIONS ********
 !********************************************
 InitWaterTableDepth= 10000.0
-FreeDrainageAtLateralBorder=1
+FreeDrainageAtLateralBorder=0
 FreeDrainageAtBottom=1
 
 !************************************
