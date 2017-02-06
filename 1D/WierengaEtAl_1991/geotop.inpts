@@ -1,7 +1,7 @@
 !*******************************
 !******* CONFIGURATION *********
 !*******************************
-TimeStepEnergyAndWater = 300
+TimeStepEnergyAndWater = 3600
 InitDateDDMMYYYYhhmm = 17/06/2014 19:00
 EndDateDDMMYYYYhhmm = 19/06/2014 19:00
 !! in order to correctly run with meteo-io on simulation period should be contained in meteo data period.
@@ -60,7 +60,7 @@ PointSkyViewFactor = 1.0
 !******* INPUT MAPS ************
 !*******************************
 DemFile = "input_maps/dem_mybasin_2"
-MeteoFile = "meteo/meteotrench5min"
+MeteoFile = "meteo/meteotrench"
 LandCoverMapFile = "input_maps/landcover_mybasin_2"
 
 !*******************************
@@ -111,6 +111,7 @@ HeaderSpecificStorativity = "SS"
 HeatEqTol = 1.0E-6
 RichardMaxIter = 1500
 RichardInitForc = 0.01
+RichardTol = 1.E-8
 
 !*************************************
 !******* OUTPUT TIME SERIES **********
