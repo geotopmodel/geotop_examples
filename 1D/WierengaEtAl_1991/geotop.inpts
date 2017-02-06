@@ -60,7 +60,7 @@ PointSkyViewFactor = 1.0
 !******* INPUT MAPS ************
 !*******************************
 DemFile = "input_maps/dem_mybasin_2"
-MeteoFile = "meteo/meteorainy"
+MeteoFile = "meteo/meteotrench5min"
 LandCoverMapFile = "input_maps/landcover_mybasin_2"
 
 !*******************************
