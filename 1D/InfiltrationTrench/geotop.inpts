@@ -41,9 +41,9 @@ HeaderCloudSWTransmissivity = "CloudTrans"
 !****** INIT AND BOUNDARY CONDITIONS ********
 !********************************************
 
-InitWaterTableDepth= 5000.0
+InitSoilPressure = -1.0E+5
 FreeDrainageAtLateralBorder=0
-FreeDrainageAtBottom=0
+FreeDrainageAtBottom=1
 
 !************************************
 !******* POINTS OF INTEREST *********
@@ -90,6 +90,7 @@ VegTransNIR = 0.25
 !*******************************
 SoilParFile = "soil/soil"
 
+SoilLayerNumber = 100
 SoilLayerTypes = 1
 InitSoilTemp = 14.0
 InitSoilTempBedrock = 14.0
