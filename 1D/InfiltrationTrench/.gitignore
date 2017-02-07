@@ -1,2 +1,4 @@
 _*
 output*
+meteo/*.csv
+.Rhistory
