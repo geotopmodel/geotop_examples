@@ -63,7 +63,7 @@ HeaderPointBedrockDepth="bedrock"
 !*******************************
 !******* INPUT  ************
 !*******************************
-MeteoFile = "meteo/meteo"
+MeteoFile = "meteo/meteotrenchhour"
 
 !*******************************
 !******** LAND COVER  **********
