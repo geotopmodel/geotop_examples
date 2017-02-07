@@ -1,2 +1,0 @@
-ID,xcoord,ycoord,bedrock_depth
-1,609882.5,4345618.0,10.0
