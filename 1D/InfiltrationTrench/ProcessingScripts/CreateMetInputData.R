@@ -23,7 +23,7 @@ out.path <- "C:/Users/Sam/src/geotop_examples/1D/InfiltrationTrench/meteo/meteot
 
 # start and end datetime
 date.start <- dmy_hm("17/06/2014 12:00")
-date.end <- dmy_hm("07/07/2014 12:00")
+date.end <- dmy_hm("27/07/2014 12:00")
 dates.all <- seq(date.start, date.end, by="hour")
 
 # make data frame
