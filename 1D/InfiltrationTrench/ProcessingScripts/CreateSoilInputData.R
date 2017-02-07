@@ -10,7 +10,7 @@ rm(list=ls())
 require(lubridate)
 
 # path to save output soil file
-out.path <- "C:/Users/Sam/src/geotop_examples/1D/WierengaEtAl_1991/soil/soil0001.txt"
+out.path <- "C:/Users/Sam/src/geotop_examples/1D/InfiltrationTrench/soil/soil0001.txt"
 
 # define soil layer properties
 min.Dz <- 10       # [mm] - thickness of top soil layer

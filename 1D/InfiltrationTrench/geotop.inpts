@@ -2,9 +2,8 @@
 !******* CONFIGURATION *********
 !*******************************
 TimeStepEnergyAndWater = 3600
-InitDateDDMMYYYYhhmm = 17/06/2014 19:00
-EndDateDDMMYYYYhhmm = 19/06/2014 19:00
-!! in order to correctly run with meteo-io on simulation period should be contained in meteo data period.
+InitDateDDMMYYYYhhmm = 17/06/2014 13:00
+EndDateDDMMYYYYhhmm = 27/07/2014 11:00
 EnergyBalance =1
 WaterBalance = 1
 PointSim = 1
@@ -14,20 +13,21 @@ PointSim = 1
 !*******************************
 Latitude = 40.25
 Longitude = 16.31
+StandardTimeSimulation=1.0
 
 !*******************************
 !****** METEO STATIONS *********
 !*******************************
 NumberOfMeteoStations=1
-MeteoStationCoordinateX=609882.5
-MeteoStationCoordinateY=4345618.0
+MeteoStationCoordinateX=609904.1
+MeteoStationCoordinateY=4345653.1
 MeteoStationLatitude=40.25
 MeteoStationLongitude=16.31
 MeteoStationElevation=300
-MeteoStationStandardTime=-7.0
-StandardTimeSimulation=-7.0
+MeteoStationStandardTime=1.0
 
 HeaderDateDDMMYYYYhhmmMeteo = "POSIX"
+HeaderJulianDayfrom0Meteo = "JD"
 HeaderIPrec = "Iprec"
 HeaderWindVelocity = "WindSp"
 HeaderWindDirection = "WindDir"
@@ -36,10 +36,12 @@ HeaderAirTemp = "AirT"
 HeaderSWglobal = "Swglob"
 HeaderCloudSWTransmissivity = "CloudTrans"
 
+
 !********************************************
 !****** INIT AND BOUNDARY CONDITIONS ********
 !********************************************
-InitWaterTableDepth= 10000.0
+
+InitSoilPressure = -1.0E+5
 FreeDrainageAtLateralBorder=0
 FreeDrainageAtBottom=1
 
@@ -50,23 +52,22 @@ PointFile = "listpoints"
 HeaderPointID = "ID"
 HeaderCoordinatePointX = "xcoord"
 HeaderCoordinatePointY = "ycoord"
-HeaderPointBedrockDepth = "bedrock_depth"
-PointElevation = 300
-PointSlope = 0
-PointAspect = 90
-PointSkyViewFactor = 1.0
+HeaderPointElevation="zcoord"
+HeaderPointLandCoverType="landcover"
+HeaderPointSoilType="soiltype"
+HeaderPointSlope="slope"
+HeaderPointAspect="aspect"
+HeaderPointSkyViewFactor="sky"
+HeaderPointBedrockDepth="bedrock"
 
 !*******************************
-!******* INPUT MAPS ************
+!******* INPUT  ************
 !*******************************
-DemFile = "input_maps/dem_mybasin_2"
-MeteoFile = "meteo/meteotrench"
-LandCoverMapFile = "input_maps/landcover_mybasin_2"
+MeteoFile = "meteo/meteotrenchhour"
 
 !*******************************
 !******** LAND COVER  **********
 !*******************************
-PointLandCoverType = 1
 NumLandCoverTypes = 1
 SoilRoughness = 100.0
 SoilAlbVisDry = 0.2
@@ -89,6 +90,7 @@ VegTransNIR = 0.25
 !*******************************
 SoilParFile = "soil/soil"
 
+SoilLayerNumber = 100
 SoilLayerTypes = 1
 InitSoilTemp = 14.0
 InitSoilTempBedrock = 14.0
@@ -111,25 +113,22 @@ HeaderSpecificStorativity = "SS"
 HeatEqTol = 1.0E-6
 RichardMaxIter = 1500
 RichardInitForc = 0.01
-RichardTol = 1.E-8
 
 !*************************************
 !******* OUTPUT TIME SERIES **********
 !*************************************
-OutputSoilMaps=0.5
-SoilAll=1
-SoilLiqWaterPressTensorFile="output_maps/waterPress"	
-SoilLiqWaterContentTensorFile="output_maps/waterCont"	
-
 DtPlotDischarge = 0.5
-DtPlotPoint = 0.0833333333333
+DtPlotPoint = 1
 SoilTempProfileFile="output-tabs/soiltemp"
 SoilLiqContentProfileFile="output-tabs/thetaliq"
 SoilLiqWaterPressProfileFile="output-tabs/soilpsi"
 PointOutputFile="output-tabs/point"
 PointAll=1
+SoilAll=1
 
 !*******************************
 !********* RECOVERY ************
 !*******************************
+!SubfolderRecoveryFiles="rec"
+!ContinuousRecovery=0.0208333333333333
 
