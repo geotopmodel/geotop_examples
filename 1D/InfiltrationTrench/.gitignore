@@ -2,3 +2,4 @@ _*
 output*
 meteo/*.csv
 .Rhistory
+*.png
